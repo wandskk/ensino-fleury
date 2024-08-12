@@ -1,0 +1,19 @@
+@import "../vars";
+@import "../mixins";
+
+.whatsapp {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1000;
+  background-color: $color-primary-green;
+  font-size: 36px;
+  color: $color-primary-white;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 5rem;
+
+  & svg {
+    display: flex;
+  }
+}

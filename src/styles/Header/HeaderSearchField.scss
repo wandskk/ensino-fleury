@@ -1,0 +1,37 @@
+@import "../vars";
+
+.headerSearchField {
+  display: flex;
+  align-items: center;
+  border: 1px solid $color-primary-blue;
+  border-radius: 12px;
+  padding: 18px 12px;
+  max-width: 353px;
+  width: 100%;
+
+  &__input {
+    border: none;
+    font-weight: 400;
+    font-size: 14px;
+    width: 100%;
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &::placeholder {
+        color: $color-primary-blue;
+    }
+
+  }
+
+  &__submit {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: transparent;
+    color: $color-primary-blue;
+    font-size: 18px;
+    cursor: pointer;
+  }
+}

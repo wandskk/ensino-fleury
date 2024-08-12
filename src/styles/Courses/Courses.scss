@@ -1,0 +1,103 @@
+@import "../vars";
+@import "../mixins";
+
+.courses {
+  padding: 62px 0;
+  background-color: $color-primary-gray-light;
+
+  @include for-tablet-landscape-up {
+    padding: 0;
+  }
+
+  &__main {
+    display: flex;
+    gap: 32px;
+
+    @include for-tablet-landscape-up {
+      flex-direction: column;
+    }
+  }
+
+  &__filters {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 413px;
+    width: 100%;
+    position: relative;
+
+    @include for-tablet-landscape-up {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 8px 10px;
+      background-color: $color-primary-white;
+      max-width: 100%;
+    }
+  }
+
+  &__filter {
+    display: flex;
+    width: 100%;
+
+    @include for-tablet-landscape-up {
+      display: none;
+    }
+
+    &.show {
+      @include for-tablet-landscape-up {
+        max-width: calc(100% - 20px);
+        width: 100%;
+        display: flex !important;
+        position: absolute;
+        z-index: 10;
+        top: 81px;
+      }
+    }
+  }
+
+  &__filterButton {
+    display: none;
+
+    @include for-tablet-landscape-up {
+      display: flex;
+      max-width: 97px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    max-width: 835px;
+    width: 100%;
+
+    @include for-tablet-landscape-up {
+      gap: 30px;
+      padding: 36px 12px;
+    }
+  }
+
+  &__gridCourses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 35px;
+    list-style: none;
+
+    @include for-tablet-landscape-up {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & .container {
+    @include for-tablet-landscape-up {
+      padding: 0;
+    }
+  }
+}

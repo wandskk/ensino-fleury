@@ -1,0 +1,90 @@
+@import "../vars";
+@import "../mixins";
+
+.heading {
+  position: relative;
+  background-color: $color-primary-blue;
+  padding: 62px 0;
+
+  @include for-tablet-landscape-up {
+    padding: 12px 32px;
+    overflow: hidden;
+  }
+
+  &__image {
+    max-width: fit-content;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include for-tablet-landscape-up {
+      max-width: 29px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: $color-primary-white;
+
+    @include for-tablet-landscape-up {
+      gap: 12px;
+    }
+  }
+
+  &__breadcrumb {
+    display: flex;
+    align-items: center;
+    max-height: 10px;    
+
+    &__list {
+      display: flex;
+      list-style: none;
+      gap: 4px;
+    }
+
+    &__item {
+      display: flex;
+      gap: 4px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 17.5px;
+    }
+
+    &__link {
+      color: $color-primary-white;
+      text-decoration: underline;
+    }
+  }
+
+  &__title {
+    display: flex;
+    gap: 24px;
+    max-height: 35px;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 60px;
+    text-transform: capitalize;
+
+    @include for-tablet-landscape-up {
+      font-size: 24px;
+      line-height: 28.8px;
+      max-height: 46px;
+      gap: 10px;
+    }
+
+    & svg {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  & .container {
+    @include for-tablet-landscape-up {
+      padding: 0;
+    }
+  }
+}

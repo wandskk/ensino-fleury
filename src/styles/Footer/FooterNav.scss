@@ -1,0 +1,29 @@
+@import "../vars";
+@import "../mixins";
+
+.footerNav {
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+
+    @include for-tablet-landscape-up {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 20px;
+    color: $color-primary-white;
+
+    @include for-tablet-landscape-up {
+      font-size: 17px;
+      font-weight: 700;
+    }
+  }
+}

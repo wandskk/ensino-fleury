@@ -1,0 +1,35 @@
+@import "../vars";
+@import "../mixins";
+
+.blogPostSocials {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: $color-primary-blue;  
+
+  &__text {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+
+    @include for-tablet-landscape-up {
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    text-decoration: none;
+  }
+
+  &__link {
+    font-size: 24px;
+    color: $color-primary-blue;
+    display: flex;
+    align-items: center;
+  }
+}

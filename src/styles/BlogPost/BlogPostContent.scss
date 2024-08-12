@@ -1,0 +1,189 @@
+@import "../vars";
+@import "../mixins";
+
+.blogPostContent {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include for-tablet-landscape-up {
+    gap: 24px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 18px;
+
+    @include for-tablet-landscape-up {
+      gap: 12px;
+    }
+  }
+
+  &__category {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28.8px;
+    text-decoration: underline;
+    color: $color-primary-blue;
+    margin-bottom: 14px;
+
+    @include for-tablet-landscape-up {
+      font-size: 18px;
+      line-height: 21.6px;
+    }
+  }
+
+  &__title {
+    font-size: 41px;
+    font-weight: 700;
+    line-height: 49.2px;
+    color: $color-primary-red;
+
+    @include for-tablet-landscape-up {
+      font-size: 32px;
+      line-height: 38.4px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28.8px;
+    color: $color-primary-blue;
+
+    @include for-tablet-landscape-up {
+      font-size: 18px;
+      line-height: 21.6px;
+    }
+  }
+
+  &__details {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+  }
+
+  &__date,
+  &__readTime {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.2px;
+    color: $color-primary-blue;
+
+    @include for-tablet-landscape-up {
+      font-size: 13px;
+      line-height: 16.25px;
+    }
+  }
+
+  &__listen {
+    position: absolute;
+    top: 50.5px;
+    right: 0;
+
+    @include for-tablet-landscape-up {
+      position: relative;
+      top: 0;
+      margin-top: 14px;
+    }
+
+    & button {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 15px 12px;
+      font-size: 16px;
+      line-height: 19.2px;
+      font-weight: 700;
+
+      @include for-tablet-landscape-up {
+        max-width: fit-content;
+        font-size: 14px;
+        gap: 10px;
+        padding: 14px;
+      }
+
+      & svg {
+        font-size: 18px;
+
+        @include for-tablet-landscape-up {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.5px;
+    color: $color-primary-gray-dark;
+
+    @include for-tablet-landscape-up {
+      font-size: 17px;
+      line-height: 21.25px;
+    }
+
+    & ul {
+      padding: 0 24px;
+    }
+  }
+
+  &__contentWithImage {
+    display: flex;
+    gap: 24px;
+
+    @include for-tablet-landscape-up {
+      flex-direction: column;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    &__image {
+      max-width: 400px;
+      max-height: 400px;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 12px;
+
+      @include for-tablet-landscape-up {
+        max-width: 100%;
+        max-height: 200px;
+      }
+    }
+
+    & h3 {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+      color: $color-primary-red;
+
+      @include for-tablet-landscape-up {
+        font-size: 19px;
+        line-height: 22.8px;
+      }
+    }
+
+    & p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 17.5px;
+      color: $color-primary-gray-dark;
+
+      @include for-tablet-landscape-up {
+        font-size: 17px;
+        line-height: 21.25px;
+      }
+    }
+  }
+}

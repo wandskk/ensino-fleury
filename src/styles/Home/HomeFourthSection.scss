@@ -1,0 +1,92 @@
+@import "../vars";
+@import "../mixins";
+
+.fourthSection {
+  padding: 62px 0;
+  background: $color-neutral-gray;
+  background-blend-mode: darken;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  @include for-tablet-landscape-up {
+    padding: 36px 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 62px;
+
+    @include for-tablet-landscape-up {
+      gap: 36px;
+    }
+  }
+
+  &__title {
+    font-size: 41px;
+    font-weight: 700;
+    line-height: 49.2px;
+    color: $color-primary-red;
+
+    @include for-desktop-up {
+      padding: 0 80px;
+    }
+
+    @include for-tablet-landscape-up {
+      padding: 0 16px;
+    }
+
+    @include for-tablet-landscape-up {
+      font-size: 32px;
+      line-height: 38.4px;
+    }
+  }
+
+  &__coursesList {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+    @include for-desktop-up {
+      overflow: hidden;
+      overflow-x: scroll;
+      padding: 0 80px;
+      padding-bottom: 12px;
+    }
+
+    @include for-tablet-landscape-up {
+      padding: 0 16px;
+      padding-bottom: 12px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    
+    @include for-desktop-up {
+      padding: 0 80px;
+    }
+    
+    @include for-tablet-landscape-up {
+      padding: 0 16px;
+      max-width: 305px;
+    }    
+    
+    & a {
+      max-width: 321px;
+      width: 100%;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 28.8px;
+      text-align: center;
+    }
+  }
+
+  & .container {
+    @include for-desktop-up {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

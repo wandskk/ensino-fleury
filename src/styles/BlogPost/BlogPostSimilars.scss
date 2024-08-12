@@ -1,0 +1,43 @@
+@import "../vars";
+@import "../mixins";
+
+.blogPostSimilars {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 48px;
+  gap: 32px;
+
+  @include for-tablet-landscape-up {
+    padding: 24px 10px;
+    gap: 24px;
+  }
+
+  &__title {
+    font-size: 41px;
+    font-weight: 700;
+    line-height: 49.2px;
+    color: $color-primary-blue;
+
+    @include for-tablet-landscape-up {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 38.4px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+
+    @include for-tablet-landscape-up {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+    flex: 1;
+    width: 100%;
+  }
+}

@@ -1,0 +1,25 @@
+@import "../styles/vars";
+@import "../styles/mixins";
+@import "../styles/fonts";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Centrale Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: $max-width-container;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 80px;
+
+  @include for-tablet-landscape-up {
+    padding: 0 16px;
+  }
+}

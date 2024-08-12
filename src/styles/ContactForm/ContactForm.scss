@@ -1,0 +1,79 @@
+@import "../vars";
+@import "../mixins";
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background-color: $color-primary-white;
+  box-shadow: 0px 4px 4px 0px #00000026;
+  border-radius: 12px;
+  padding: 24px;
+
+  @include for-tablet-landscape-up {
+    gap: 24px;
+    padding: 16px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include for-tablet-landscape-up {
+      gap: 12px;
+    }
+  }
+
+  &__title {
+    font-size: 29px;
+    font-weight: 700;
+    line-height: 34.8px;
+    color: $color-primary-red;
+
+    @include for-tablet-landscape-up {
+      font-size: 23px;
+      line-height: 27.6px;
+    }
+  }
+
+  &__description {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    color: $color-primary-blue;
+
+    @include for-tablet-landscape-up {
+      font-size: 16px;
+      line-height: 19.2px;
+    }
+  }
+
+  &__fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+
+    @include for-tablet-landscape-up {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  &__input {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+
+    &.--message {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    & .MuiFormControl-root {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@import "../vars";
+@import "../mixins";
+
+.thirdSection {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 48px;
+
+  @include for-tablet-landscape-up {
+    padding: 30px 12px;
+    gap: 24px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include for-tablet-landscape-up {
+      gap: 12px;
+    }
+  }
+
+  &__title {
+    font-size: 41px;
+    font-weight: 700;
+    line-height: 49.2px;
+    color: $color-primary-blue;
+
+    @include for-tablet-landscape-up {
+      font-size: 32px;
+      line-height: 38.4px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 29px;
+    font-weight: 300;
+    line-height: 38.4px;
+    color: $color-primary-blue;
+
+    @include for-tablet-landscape-up {
+      font-size: 22px;
+      line-height: 26.4px;
+    }
+  }
+
+  &__postsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    list-style: none;
+
+    @include for-tablet-landscape-up {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

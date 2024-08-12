@@ -1,0 +1,97 @@
+@import "../mixins";
+@import "../vars";
+
+.notFoundPage {
+  background-color: $color-primary-gray-light;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 815px;
+
+    @include for-tablet-landscape-up {
+      gap: 16px;
+    }
+  }
+
+  &__404 {
+    position: absolute;
+    font-size: 400px;
+    font-weight: 700;
+    line-height: 480px;
+    color: $color-primary-blue;
+    opacity: 0.3;
+    top: 0;
+    z-index: 1;
+
+    @include for-tablet-landscape-up {
+      font-size: 160px;
+      line-height: 192px;
+      top: 160px;
+    }
+  }
+
+  &__title {
+    padding-top: 170px;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 86.4px;
+    color: $color-primary-red;
+    z-index: 2;
+
+    @include for-tablet-landscape-up {
+      font-size: 41px;
+      line-height: 49.2px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 60px;
+    color: $color-primary-blue;
+
+    @include for-tablet-landscape-up {
+      font-size: 24px;
+      line-height: 28.8px;
+    }
+  }
+
+  &__action {
+    color: $color-primary-red;
+    font-size: 30px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-bottom: 170px;
+
+    @include for-tablet-landscape-up {
+      font-size: 20px;
+    }
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: $color-primary-red;
+    font-size: 29px;
+    font-weight: 700;
+    line-height: 34.8px;
+
+    @include for-tablet-landscape-up {
+      font-size: 23px;
+      line-height: 27.6px;
+    }
+  }
+
+  &__simbolo {
+    position: absolute;
+    top: 70px;
+    right: 1rem;
+    z-index: 0;
+
+    @include for-tablet-landscape-up {
+      max-width: 112px;
+    }
+  }
+}

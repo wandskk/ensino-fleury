@@ -1,0 +1,32 @@
+@import "../vars";
+@import "../mixins";
+
+.blogPostTags {
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 8px;    
+  }
+
+  &__item {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20.4px;
+    text-decoration: none;
+    background-color: $color-primary-blue;
+    padding: 12px;
+    border-radius: 62px;
+    cursor: pointer;
+
+    @include for-tablet-landscape-up {
+      font-size: 12px;
+      line-height: 14.4px;
+      padding: 10px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-primary-white;
+  }
+}

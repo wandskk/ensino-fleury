@@ -1,0 +1,26 @@
+@import "../vars";
+@import "../mixins";
+
+.blogPostBreadcrumb {
+  padding: 48px;
+  padding-bottom: 32px;
+
+  @include for-tablet-landscape-up {
+    padding: 30px 10px;
+    padding-bottom: 32px;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 4px;
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: $color-primary-blue;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.5px;
+  }
+}

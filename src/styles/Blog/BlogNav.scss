@@ -1,0 +1,38 @@
+@import "../vars";
+@import "../mixins";
+
+.blogNav {
+  background-color: $color-primary-blue;
+  padding: 24px 0;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 24px;
+
+    @include for-tablet-landscape-up {
+      overflow: hidden;
+      overflow-x: scroll;
+      justify-content: flex-start;
+      padding: 0 16px;
+    }
+  }
+
+  &__link {
+    color: $color-primary-white;
+    font-weight: 700;
+    line-height: 19.2px;
+    white-space: nowrap;
+
+    @include for-tablet-landscape-up {
+      width: 100%;
+    }
+  }
+
+  & .container {
+    @include for-tablet-landscape-up {
+      padding: 0;
+    }
+  }
+}

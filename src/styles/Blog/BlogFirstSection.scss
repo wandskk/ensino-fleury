@@ -1,0 +1,59 @@
+@import "../vars";
+@import "../mixins";
+
+.firstSection {
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  min-height: 600px;
+  padding: 0 48px;
+  height: 100%;
+
+  @include for-tablet-landscape-up {
+    min-height: 460px;
+    padding: 12px;
+    align-items: flex-end;
+  }
+
+  &__card {
+    max-width: 632px;
+    background-color: $color-primary-white-90;
+    backdrop-filter: blur(12px);
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    box-shadow: 0px 4px 4px 0px #00000026;
+    border-radius: 12px;
+    overflow: hidden;
+
+    @include for-tablet-landscape-up {
+      gap: 24px;
+      padding: 24px 16px;
+    }
+  }
+
+  &__title {
+    font-size: 41px;
+    font-weight: 700;
+    line-height: 49.2px;
+    color: $color-primary-red;
+
+    @include for-tablet-landscape-up {
+      font-size: 32px;
+      line-height: 38.4px;
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+    color: $color-primary-blue;
+    font-weight: 400;
+    line-height: 19.2px;
+
+    @include for-tablet-landscape-up {
+        font-size: 13px;
+        line-height: 16.25px;
+    }
+  }
+}

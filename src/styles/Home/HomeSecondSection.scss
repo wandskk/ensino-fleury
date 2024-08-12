@@ -1,0 +1,132 @@
+@import "../vars";
+@import "../mixins";
+
+.secondSection {
+  background-color: $color-primary-blue;
+  padding: 62px 0;
+
+  @include for-tablet-landscape-up {
+    padding: 36px 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 62px;
+    color: $color-primary-white;
+
+    @include for-tablet-landscape-up {
+      gap: 36px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include for-tablet-landscape-up {
+      gap: 16px;
+    }
+  }
+
+  &__title {
+    font-size: 41px;
+    font-weight: 700;
+    line-height: 49.2px;
+
+    @include for-tablet-landscape-up {
+      font-size: 32px;
+      line-height: 38.4px;
+    }
+  }
+
+  &__description {
+    font-size: 29px;
+    font-weight: 300;
+    line-height: 34.8px;
+
+    @include for-tablet-landscape-up {
+      font-size: 22px;
+      line-height: 26.4px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    @include for-tablet-landscape-up {
+      gap: 10px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0 auto;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    background-color: $color-primary-white-90;
+    max-width: 305px;
+    min-width: 86.86px;
+    width: 100%;
+    padding: 32px 24px;
+    box-shadow: 0px 4px 4px 0px #00000026;
+    border-radius: 12px;
+
+    @include for-tablet-landscape-up {
+      gap: 16px;
+    }
+  }
+
+  &__image {
+    max-width: 100px;
+    width: 100%;
+    height: auto;
+
+    @include for-tablet-landscape-up {
+      max-width: 86.56px;
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.8px;
+    color: $color-primary-red;
+    text-align: center;
+
+    @include for-tablet-landscape-up {
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    max-width: 295px;
+    width: 100%;
+
+    @include for-tablet-landscape-up {
+      max-width: 100%;
+    }
+
+    & a {
+      font-size: 24px;
+      font-weight: 700;
+      text-align: center;
+
+      @include for-tablet-landscape-up {
+        font-size: 19px;
+        line-height: 22.8px;
+      }
+    }
+  }
+}

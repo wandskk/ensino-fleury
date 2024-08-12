@@ -1,0 +1,141 @@
+@import "../vars";
+@import "../mixins";
+
+.headerNav {
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 24px;
+
+  @include for-tablet-landscape-up {
+    padding: 0;
+  }
+
+  &__hamburger {
+    display: none;
+    color: $color-primary-blue;
+    font-size: 1.5rem;
+
+    @include for-tablet-landscape-up {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    z-index: 10;
+    border-radius: 0 0 12px 12px;
+
+    @include for-tablet-landscape-up {
+      box-shadow: 0px 4px 12px 0px #00000026;
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: $color-primary-white;
+      top: 76px;
+      width: 100%;
+      padding: 12px;
+      gap: 0;
+
+      &.--open {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+      }
+    }
+  }
+
+  &__item {
+    @include for-tablet-landscape-up {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      width: 100%;
+      padding: 16px 8px;
+      border-bottom: 1px solid $color-primary-blue;
+    }
+  }
+
+  &__link {
+    color: $color-primary-blue;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  &__dropdown {
+    list-style: none;
+    position: relative;
+
+    @include for-tablet-landscape-up {
+      & svg {
+        display: none;
+      }
+    }
+
+    &__list {
+      list-style: none;
+      display: none;
+      position: absolute;
+      background-color: $color-primary-white;
+      box-shadow: 0px 4px 12px 0px #00000026;
+      padding: 12px;
+      top: 3rem;
+      width: 372px;
+
+      @include for-tablet-landscape-up {
+        position: relative;
+        top: 0;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+        margin-top: 16px;
+      }
+
+      &.--open {
+        display: flex;
+        flex-direction: column;
+
+        @include for-tablet-landscape-up {
+          align-items: end;
+        }
+      }
+    }
+
+    &__item {
+      padding: 12px;
+      border-radius: 12px;
+      cursor: pointer;
+
+      @include for-tablet-landscape-up {
+        padding: 16px 0;
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+
+      &:hover {
+        background-color: $color-primary-yellow;
+      }
+    }
+
+    &__link {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 19.2px;
+      color: $color-primary-blue;
+      text-decoration: none;
+
+      @include for-tablet-landscape-up {
+        font-weight: 300;
+        line-height: 19.2px;
+      }
+    }
+  }
+}

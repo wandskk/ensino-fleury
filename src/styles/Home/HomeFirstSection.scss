@@ -1,0 +1,23 @@
+@import "../mixins";
+
+.homeFirstSection {
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  min-height: 800px;
+  height: 100%;
+  padding: 62px 0;
+
+  @include for-tablet-landscape-up {
+    min-height: calc(100vh - 62px);
+    align-items: flex-end;
+  }
+
+  &__cardsSlider {
+    max-width: 630px;
+
+    @include for-tablet-landscape-up {
+      max-width: 100%;
+    }
+  }
+}

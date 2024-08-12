@@ -1,0 +1,46 @@
+@import "../vars";
+@import "../mixins";
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  max-width: 280px;
+  width: 100%;
+  background-color: $color-primary-blue;
+  padding: 4px;
+  border-radius: 32px;
+
+  @include for-tablet-landscape-up {
+    max-width: 200px;
+  }
+
+  &__indicators {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-primary-white;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20.4px;
+
+    @include for-tablet-landscape-up {
+      font-size: 12px;
+      line-height: 14.4px;
+    }
+  }
+
+  & button {
+    display: flex;
+    justify-content: center;
+    border-radius: 32px;
+    padding: 8px;
+    font-size: 24px;
+    max-width: 80px;
+    width: 100%;
+
+    @include for-tablet-landscape-up {
+        font-size: 16px;
+      max-width: 64px;
+    }
+  }
+}
